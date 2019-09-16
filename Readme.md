@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Sergey Yanacov](https://up.htmlacademy.ru/htmlcss/26/user/1074475).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
