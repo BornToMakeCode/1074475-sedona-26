@@ -33,24 +33,83 @@
     <main class="hotels-content">
         <section class="hotels">
             <h1 class="visually-hidden">Гостиницы Седона</h1>            
-            
+           
+            <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="GET">
+                <fieldset>
+                    <legend>Инфраструктура:</legend>
+                    <ul class="filter-options-list">
+                        <li class="filter-option">
+                            <input type="checkbox" class="visually-hidden filter-option-input input-checkbox" name="hasSwimmingPool" id="filter-swimming-pool" checked>
+                            <label for="filter-swimming-pool">Бассейн</label>
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" class="visually-hidden filter-option-input input-checkbox" name="hasParking" id="filter-parking">
+                            <label for="filter-parking">Парковка</label>                            
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" class="visually-hidden filter-option-input input-checkbox" name="hasWiFi" id="filter-wi-fi">
+                            <label for="filter-wi-fi">Wi-Fi</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Тип жилья:</legend>
+                    <ul class="filter-options-list">
+                        <li class="filter-option">
+                            <input type="checkbox" class="visually-hidden filter-option-input input-checkbox" name="isHotel" id="filter-hotel" checked>
+                            <label for="filter-hotel">Гостиница</label>                            
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" class="visually-hidden filter-option-input input-checkbox" name="isMotel" id="filter-motel" checked>
+                            <label for="filter-motel">Мотель</label>
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" class="visually-hidden filter-option-input input-checkbox" name="isApartment" id="filter-apartment" checked>
+                            <label for="filter-apartment">Апартаменты</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <div class="filter-price-range">
+                    <span class="price-range-title">Стоимость в сутки(Р):</span> 
+                    <span class="price-range-type">От:</span>
+                    <span class="price-range">0</span>
+                    <span class="price-range-type">До:</span>
+                    <span class="price-range">3000</span>                   
+                    <div class="price-range-slider">                        
+                        <input value="0" min="0" max="5000" step="100" type="range" name="fromRange">
+                        <input value="3000" min="100" max="5000" step="100" type="range" name="toRange">
+                    </div>
+                </div>
+                <button type="submit" class="button hotels-filter-button">Показать</button>
+            </form>
+
             <div class="hotels-sorting">
                 <div class="filter-result">
                     <span>Найдено:</span>
                     <span class="filter-result-count">3</span>
                 </div>
-                <div>
+                <div class="hotels-value-sorting">
                     <span>Сортировка:</span>
-                    <ul class="hotels-sorting-list">
-                        <li class="hotels-sorting-item">
+                    <ul class="value-sorting-list">
+                        <li class="value-sorting-item">
                             <button type="button" class="button hotel-sorting-button">По цене</button>
                         </li>
-                        <li class="hotels-sorting-item">
+                        <li class="value-sorting-item">
                             <button type="button" class="button hotel-sorting-button">По типу</button>
                         </li>
-                        <li class="hotels-sorting-item">
+                        <li class="value-sorting-item">
                             <button type="button" class="button hotel-sorting-button">По рейтингу</button>
                         </li>
+                    </ul>
+                </div>
+                <div class="hotels-order-sorting">
+                    <ul class="order-sorting-list">
+                        <li class="order-sorting-item ascending-order">
+                            <a href="#">Отсортировать по возрастанию</a>
+                        </li>
+                        <li class="order-sorting-item descending-order">
+                            <a href="#" >Отсортировать по убыванию</a>                               
+                        </li>                       
                     </ul>
                 </div>
             </div>           
