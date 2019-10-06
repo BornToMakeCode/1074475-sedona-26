@@ -35,7 +35,7 @@
             <h1 class="visually-hidden">Гостиницы Седона</h1>            
            
             <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="GET">
-                <fieldset>
+                <fieldset name="infrastructure-filter">
                     <legend>Инфраструктура:</legend>
                     <ul class="filter-options-list">
                         <li class="filter-option">
@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset name="housing-type-filter">
                     <legend>Тип жилья:</legend>
                     <ul class="filter-options-list">
                         <li class="filter-option">
@@ -69,17 +69,23 @@
                         </li>
                     </ul>
                 </fieldset>
-                <div class="filter-price-range">
-                    <span class="price-range-title">Стоимость в сутки(Р):</span> 
-                    <span class="price-range-type">От:</span>
-                    <span class="price-range">0</span>
-                    <span class="price-range-type">До:</span>
-                    <span class="price-range">3000</span>                   
-                    <div class="price-range-slider">                        
-                        <input value="0" min="0" max="5000" step="100" type="range" name="fromRange">
-                        <input value="3000" min="100" max="5000" step="100" type="range" name="toRange">
-                    </div>
-                </div>
+                <fieldset name="price-filter">
+                    <legend>Стоимость в сутки(Р):</legend>
+                    <ul class="price-filter-list">
+                        <li class="price-filter-option">
+                            <label>От:</label>
+                            <input type="number" class="price-range price-range-from" placeholder="0">
+                        </li>
+                        <li class="price-filter-option">
+                            <label>До:</label>
+                            <input type="number" class="price-range price-range-to" placeholder="3000">
+                        </li>
+                    </ul>
+                </fieldset>
+                <div class="range-slider price-range-slider">  
+                    <button type="button" class="button range-slider-button-from">Начальная стоимость в сутки</button>   
+                    <button type="button" class="button range-slider-button-to">Конечная стоимость в сутки</button>
+                </div>                
                 <button type="submit" class="button hotels-filter-button">Показать</button>
             </form>
 
@@ -92,26 +98,24 @@
                     <span>Сортировка:</span>
                     <ul class="value-sorting-list">
                         <li class="value-sorting-item">
-                            <button type="button" class="button hotel-sorting-button">По цене</button>
+                            <a href="#" >По цене</a>                            
                         </li>
                         <li class="value-sorting-item">
-                            <button type="button" class="button hotel-sorting-button">По типу</button>
+                            <a href="#" >По типу</a>                            
                         </li>
                         <li class="value-sorting-item">
-                            <button type="button" class="button hotel-sorting-button">По рейтингу</button>
+                            <a href="#" >По рейтингу</a>                            
                         </li>
                     </ul>
-                </div>
-                <div class="hotels-order-sorting">
-                    <ul class="order-sorting-list">
-                        <li class="order-sorting-item ascending-order">
-                            <a href="#">Отсортировать по возрастанию</a>
-                        </li>
-                        <li class="order-sorting-item descending-order">
-                            <a href="#" >Отсортировать по убыванию</a>                               
-                        </li>                       
-                    </ul>
-                </div>
+                </div>                
+                <ul class="order-sorting-list">
+                    <li class="order-sorting-item ascending-order">
+                        <a href="#">Отсортировать по возрастанию</a>
+                    </li>
+                    <li class="order-sorting-item descending-order">
+                        <a href="#" >Отсортировать по убыванию</a>                               
+                    </li>                       
+                </ul>               
             </div>           
 
             <ul class="hotels-list">
