@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;    
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navigation-items {
+    list-style: none;
+}
+
+.navigation-items a {
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.navigation-items a:hover,
+.navigation-items a:focus {
+    color: #81b3d2;
+    outline: none;
+}
+
+.navigation-items a:active {
+    opacity: 0.3;
+}
+
+.main-content h1 {
+    line-height: 26px;
+    font-size: 21px;
+}
+
+.advantages h2 {
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.hotel-search .hotel-search-title {
+    line-height: 36px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.hotel-search .hotel-search-description {
+    line-height: 24px;   
+    font-weight: 400;
+}
+
+.hotel-search-button {
+    line-height: 26px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #766357;
+}
+
+.hotel-search-button:hover,
+.hotel-search-button:focus {
+    background-color: #604e43;
+}
+
+.hotel-search-button:active {
+    background-color:#503e33;
+}
+
+.site-footer .social-button-list {
+    list-style: none;
+}
+
+.site-footer .hashtag {
+    line-height: 26px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #000000;
+}   
+
+.site-footer .copyright b {
+    font-weight: 400;   
+    line-height: 26px;
+}
+
+.hotel-search-form {
+    display:none;
+}
+
+.hotels-item h2 {
+    line-height: 26px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.hotels-item .hotels-type,
+.hotels-item .hotels-price {  
+    color: #333333;
+}
+
+.hotels-rating .rating-mark {
+    color: #666666;
+}
+
+.hotels-item .hotel-button-details {
+    color: #ffffff;
+    background-color: #81b3d2;
+}
+.hotels-item .hotel-button-details:hover,
+.hotels-item .hotel-button-details:focus {
+    background-color: #669ec0;
+    outline: none;
+}
+
+.hotels-item .hotel-button-details:active {
+    background-color:#5496bd;
+    opacity: 0.3;
+}
+
+.hotels-item .hotel-button-book {
+    color: #ffffff;
+    background-color: #766357;
+}
+
+.hotels-item .hotel-button-book:hover,
+.hotels-item .hotel-button-book:focus {  
+    background-color: #604e43;
+}
+
+.hotels-item .hotel-button-book:active {  
+    background-color: #503e33;
+    opacity: 0.3;
+}
+
