@@ -7,13 +7,21 @@ body {
     font-weight: 400;
     color: #000000;
     text-transform: uppercase;
-    background-color: #ffffff;    
+    background-color: #f1f1f1;  
 }
 
 a {
     text-decoration: none;
     outline: none;
 }
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;    
+  }
 
 .navigation-items {
     list-style: none;
@@ -34,74 +42,70 @@ a {
     opacity: 0.3;
 }
 
+.main-content {
+    text-align: center;
+}
+
 .main-content h1 {
     line-height: 26px;
-    font-size: 21px;
-    text-align: center;
+    font-size: 21px;  
 }
 
 .advantages h2 {
     line-height: 26px;
     font-size: 14px;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 400;   
 }
 
 .advantages-list {
     list-style: none;
 }
 
-.advantages-item {
-    background-color: #eeeeee;
-}
-
-.advantages-item:first-child,
-.advantages-item:nth-child(2) {
-   background-color: #81b3d2; 
-}
-
 .advantages-item h3,
 .advantages-item h4 {
     line-height: 21px;
     font-size: 21px;
-    font-weight: 700;
-    text-align: center;
+    font-weight: 700;  
+}
+
+.advantages-item h4 {
+    color: #000000;
 }
 
 .advantages-item p,
 .advantages-item span {
     line-height: 21px;
     font-size: 14px;
-    font-weight: 400;
-    color: #333333;
-    text-align: center;
+    font-weight: 400;   
 }
 
-.advantages-item:first-child h3,
-.advantages-item:first-child p,
-.advantages-item:first-child span,
-.advantages-item:nth-child(2) h3,
-.advantages-item:nth-child(2) p,
-.advantages-item:nth-child(2) span {
-  
-   color: #ffffff;
+.advantages-item.short {
+    background-color: #eeeeee;
+    color: #333333;
+    width: 400px;
+ }
+
+.advantages-item.detailed {
+    background-color: #81b3d2;
+    color: #ffffff;
 }
 
 .advantages-description {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
 
-.advantages-description .advantage-description-item p,
-.advantages-description .advantage-description-item span {
+.advantage-description-item {   
+    width: 400px;
     color: #333333;
 }
 
-
-
-
-.advantage-description-item p,
-.advantage-description-item span {   
-    color: #333333;
+/* норм форматировать так или нужно добавлять еще один wrapper и задавать ему отсутпы внутренние? */
+.advantage-description-item p {   
+    padding-right: 72px; 
+    padding-left: 72px;
 }
 
 .hotel-search-title {
@@ -112,8 +116,7 @@ a {
 
 .hotel-search-description {
     line-height: 24px;   
-    font-weight: 400;
-    text-align: center;
+    font-weight: 400;   
 }
 
 .hotel-search-button {
@@ -138,9 +141,10 @@ a {
     opacity: 0.9;
 }
 
+/* Нужно ли список социальных кнопок превращать во flex или есть более правильный подход? */
 .social-button-list {
     list-style: none;
-    text-align: center;
+    width: 150px;  
 }
 
 .hashtag {
@@ -295,3 +299,146 @@ a {
     opacity: 0.3;
 }
 
+
+
+
+
+
+/* СЕТКА ГЛАВНОЙ*/
+
+/* Почему мы не можем все что в body обернуть в <div class="container"> и не играться с этой оберткой в каждом блоке? */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Не пришло ничего в голову кроме этого. И, хоть вроде как и встало на место в центр, но не пиксел перфект и не могу понять почему, т.к. размеры взял те что в фотошопе */
+.site-header .logo {
+    position: absolute;   
+}
+
+.site-navigation {
+    width: 1054px;
+    margin: 0 auto;   
+}
+
+.navigation-items {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.navigation-items li {
+    width: 128px;
+}
+
+.navigation-items li:nth-child(1) {  
+    margin-right: 112px;
+    text-align: left;
+}
+
+.navigation-items li:nth-child(2) {   
+    text-align: left;
+}
+
+.navigation-items li:nth-child(3) {  
+    margin-left: auto;
+    text-align: right;
+}
+
+.navigation-items li:nth-child(4) {   
+    margin-left: 113px;
+    text-align: right;
+}
+
+.advantages-item.detailed {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-definition {
+    width: 400px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0; 
+}
+
+.advantages-description {
+    display: flex;
+}
+
+.site-footer .site-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-right: 73px;
+    padding-bottom: 35px;
+    padding-left: 73px;
+}
+
+
+/* СЕТКА ОТЕЛЕЙ*/
+
+/* Надо ли прописывать сразу padding:0 и margin:0 или достаточно одного этого свойства? */
+.hotels-list {
+    padding-left: 0;
+}
+
+.hotels-container {
+    display: flex;
+    margin: auto;
+    width: 1056px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+
+.hotels-list.hotels-container {
+    flex-direction: column;
+}
+
+.infrastructure-filter {
+    width: 264px;
+}
+
+.housing-type-filter {
+    width: 264px;
+}
+
+.order-sorting-list {
+    margin-left: auto;
+}
+
+.right-side-container {
+    margin-left: auto; 
+    width: 328px;
+}
+
+.hotels-item {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hotels-image {
+    margin-right: 32px;
+}
+
+.hotels-rating {
+    margin-left: auto;
+}
+
+.value-sorting-list {
+    display: flex;
+    justify-content: space-around;
+    width: 306px;
+}
