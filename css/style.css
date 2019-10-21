@@ -28,7 +28,7 @@ a {
     width: 1px;
     height: 1px;
     margin: -1px;    
-  }
+}
 
 .container {
     width: 1200px;
@@ -131,7 +131,7 @@ a {
     padding-right: 70px;
     padding-bottom: 70px;
     padding-left: 70px;    
- }
+}
 
 .advantages-item.detailed {
     display: flex;
@@ -320,7 +320,7 @@ a {
     list-style: none;
 }
 
-.value-sorting-item a{
+.value-sorting-item a {
     opacity: 0.3;
     text-decoration: underline;
 }
@@ -362,7 +362,7 @@ a {
     margin-left: auto;
 }
 
-.hotel-title h2{
+.hotel-title h2 {
     line-height: 26px;
     font-size: 21px;
     font-weight: 700; 
