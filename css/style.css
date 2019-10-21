@@ -1,3 +1,10 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;    
@@ -23,8 +30,42 @@ a {
     margin: -1px;    
   }
 
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.site-header .logo {
+    position: absolute;   
+    top:0;
+    left: 50%;
+    margin-left: -70px;
+}
+
+.site-navigation {
+    width: 1054px;
+    margin: 0 auto;   
+}
+  
 .navigation-items {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
     list-style: none;
+}
+
+.navigation-items li {   
+    width: 25%;
+    text-align: left;
+}
+
+.navigation-items li:nth-child(3) {  
+    margin-left: auto;
+    text-align: right;
+}
+.navigation-items li:nth-child(4) {
+    text-align: right;
 }
 
 .navigation-items a {
@@ -58,6 +99,9 @@ a {
 }
 
 .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0; 
     list-style: none;
 }
 
@@ -83,14 +127,33 @@ a {
     background-color: #eeeeee;
     color: #333333;
     width: 400px;
+    padding-top: 55px;
+    padding-right: 70px;
+    padding-bottom: 70px;
+    padding-left: 70px;    
  }
 
 .advantages-item.detailed {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #81b3d2;
     color: #ffffff;
 }
 
+.advantages-definition {
+    width: 400px;
+    padding-top: 45px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+}
+
+.advantages-item:nth-child(2) .advantages-definition {
+    order: 1;
+}
+
 .advantages-description {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -98,14 +161,12 @@ a {
 }
 
 .advantage-description-item {   
-    width: 400px;
+    width: 400px;   
     color: #333333;
-}
-
-/* норм форматировать так или нужно добавлять еще один wrapper и задавать ему отсутпы внутренние? */
-.advantage-description-item p {   
-    padding-right: 72px; 
-    padding-left: 72px;
+    padding-top: 55px;
+    padding-right: 55px;
+    padding-bottom: 55px;
+    padding-left: 55px;
 }
 
 .hotel-search-title {
@@ -137,14 +198,18 @@ a {
 }
 
 .site-footer {
+    display: flex;
+    justify-content: space-between; 
     background-color: #fefefe;
     opacity: 0.9;
 }
 
-/* Нужно ли список социальных кнопок превращать во flex или есть более правильный подход? */
 .social-button-list {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
-    width: 150px;  
+    width: 33.3%;
+    text-align: center;
 }
 
 .hashtag {
@@ -152,11 +217,23 @@ a {
     font-size: 21px;
     font-weight: 700;
     color: #000000;
+    width: 33.3%;
+    text-align: center;
 }   
+
+.copyright {
+    width: 33.3%;
+    text-align: center;
+}
 
 .copyright b {
     font-weight: 400;   
     line-height: 26px;
+}
+
+.hotels-container {
+    margin: auto;
+    width: 1056px;
 }
 
 .hotel-search-form {
@@ -164,6 +241,9 @@ a {
 }
 
 .hotels-filter-form {
+    display: flex;
+    padding-left: 73px;
+    padding-right: 73px;
     background-color: #477ca6;
     background-image: url("../img/filter-background.jpg");  
     background-size: cover;
@@ -174,6 +254,19 @@ a {
     line-height: 21px;
     font-size: 16px;
     font-weight: 700;
+}
+
+.infrastructure-filter {
+    width: 264px;
+}
+
+.housing-type-filter {
+    width: 264px;
+}
+
+.right-side-container {
+    margin-left: auto; 
+    width: 328px;
 }
 
 .filter-options-list {
@@ -206,6 +299,7 @@ a {
 
 .hotels-sorting {
     background-color: #fefefe;
+    display: flex;
 }
 
 .filter-result {
@@ -220,6 +314,9 @@ a {
 }
 
 .value-sorting-list {
+    display: flex;
+    justify-content: space-around;
+    width: 306px;
     list-style: none;
 }
 
@@ -241,19 +338,45 @@ a {
 }
 
 .order-sorting-list {
+    margin-left: auto;
     list-style: none;
 }
 
 .hotels-list {
     background-color: #fefefe;
     list-style: none;
+    padding-left: 0;
 }
 
-.hotels-item h2 {
+.hotels-image {
+    margin-right: 32px;
+}
+
+.hotels-item {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hotels-rating {
+    margin-left: auto;
+}
+
+.hotel-title h2{
     line-height: 26px;
     font-size: 21px;
-    font-weight: 700;
+    font-weight: 700; 
     color: #000000;
+}
+
+.hotel-title h2:hover,
+.hotel-title h2:focus {
+    color: #81b3d2;
+}
+
+.hotel-title h2:active {
+    color: #000000;
+    opacity: 0.3;
 }
 
 .hotels-type,
@@ -297,148 +420,4 @@ a {
 .hotel-button-book:active {  
     background-color: #503e33;
     opacity: 0.3;
-}
-
-
-
-
-
-
-/* СЕТКА ГЛАВНОЙ*/
-
-/* Почему мы не можем все что в body обернуть в <div class="container"> и не играться с этой оберткой в каждом блоке? */
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-}
-
-.site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Не пришло ничего в голову кроме этого. И, хоть вроде как и встало на место в центр, но не пиксел перфект и не могу понять почему, т.к. размеры взял те что в фотошопе */
-.site-header .logo {
-    position: absolute;   
-}
-
-.site-navigation {
-    width: 1054px;
-    margin: 0 auto;   
-}
-
-.navigation-items {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0px;
-}
-
-.navigation-items li {
-    width: 128px;
-}
-
-.navigation-items li:nth-child(1) {  
-    margin-right: 112px;
-    text-align: left;
-}
-
-.navigation-items li:nth-child(2) {   
-    text-align: left;
-}
-
-.navigation-items li:nth-child(3) {  
-    margin-left: auto;
-    text-align: right;
-}
-
-.navigation-items li:nth-child(4) {   
-    margin-left: 113px;
-    text-align: right;
-}
-
-.advantages-item.detailed {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.advantages-definition {
-    width: 400px;
-}
-
-.advantages-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0; 
-}
-
-.advantages-description {
-    display: flex;
-}
-
-.site-footer .site-footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 35px;
-    padding-right: 73px;
-    padding-bottom: 35px;
-    padding-left: 73px;
-}
-
-
-/* СЕТКА ОТЕЛЕЙ*/
-
-/* Надо ли прописывать сразу padding:0 и margin:0 или достаточно одного этого свойства? */
-.hotels-list {
-    padding-left: 0;
-}
-
-.hotels-container {
-    display: flex;
-    margin: auto;
-    width: 1056px;
-    padding-top: 33px;
-    padding-bottom: 33px;
-}
-
-.hotels-list.hotels-container {
-    flex-direction: column;
-}
-
-.infrastructure-filter {
-    width: 264px;
-}
-
-.housing-type-filter {
-    width: 264px;
-}
-
-.order-sorting-list {
-    margin-left: auto;
-}
-
-.right-side-container {
-    margin-left: auto; 
-    width: 328px;
-}
-
-.hotels-item {
-    display: flex;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.hotels-image {
-    margin-right: 32px;
-}
-
-.hotels-rating {
-    margin-left: auto;
-}
-
-.value-sorting-list {
-    display: flex;
-    justify-content: space-around;
-    width: 306px;
 }
