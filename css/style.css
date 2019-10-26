@@ -22,18 +22,37 @@ a {
     outline: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
 .visually-hidden {
     position: absolute;
+    white-space: nowrap;
+    clip-path: inset(100%);
     clip: rect(0 0 0 0);
+    overflow: hidden;
     width: 1px;
     height: 1px;
-    margin: -1px;    
+    margin: -1px; 
+    border: 0;
+    padding: 0;   
 }
 
 .container {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
+}
+
+.site-header {
+    position: absolute;
+    width: 1200px;
+    background-color: #ffffff;
+    z-index: 1;
 }
 
 .site-header .logo {
@@ -51,13 +70,16 @@ a {
 .navigation-items {
     display: flex;
     justify-content: space-between;
+    margin: 0;
     padding-left: 0px;
     list-style: none;
 }
 
 .navigation-items li {   
-    width: 25%;
+    width: 23%;
     text-align: left;
+    padding-top: 14px;
+    padding-bottom: 16px;
 }
 
 .navigation-items li:nth-child(3) {  
@@ -71,7 +93,7 @@ a {
 .navigation-items a {
     line-height: 26px;
     font-weight: 700;
-    color: #000000;
+    color: #000000;    
 }
 
 .navigation-items a:hover,
@@ -87,12 +109,50 @@ a {
     text-align: center;
 }
 
+.wellcome-poster {
+    position: relative;
+    width: 1200px; 
+    height: 565px;
+    background-image: url("../img/welcome-background.jpg")
+}
+
+.wellcome-poster::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-welcome.svg");
+    width: 459px;
+    height: 353px;
+    margin-left: -230px;
+    top: 132px;
+    left: 50%;
+    right: 50%;
+}
+
+.wellcome-poster::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/welcome-polygon.png");
+    width: 1201px;
+    height: 59px;    
+    bottom: 0;
+    left: 0;
+}
+
 .main-content h1 {
     line-height: 26px;
     font-size: 21px;  
+    margin: 0;
+    background-color: #ffffff;
+    padding-top: 59px;    
+    padding-right: 320px;
+    margin-bottom: 103px;
+    padding-left: 316px;
 }
 
 .advantages h2 {
+    position: absolute;
+    top: 691px;    
+    padding-left: 356px;    
     line-height: 26px;
     font-size: 14px;
     font-weight: 400;   
@@ -101,6 +161,7 @@ a {
 .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
     padding: 0; 
     list-style: none;
 }
@@ -110,9 +171,12 @@ a {
     line-height: 21px;
     font-size: 21px;
     font-weight: 700;  
+    margin-bottom: 23px;
+    padding-left: 71px;
+    padding-right: 71px;
 }
 
-.advantages-item h4 {
+.advantages-item h4 {   
     color: #000000;
 }
 
@@ -121,31 +185,44 @@ a {
     line-height: 21px;
     font-size: 14px;
     font-weight: 400;   
+    margin-top: 20px;
 }
 
 .advantages-item.short {
     background-color: #eeeeee;
     color: #333333;
     width: 400px;
-    padding-top: 55px;
-    padding-right: 70px;
-    padding-bottom: 70px;
-    padding-left: 70px;    
+    padding-top: 27px;
+    padding-right: 64px;
+    padding-bottom: 46px;
+    padding-left: 64px;
 }
 
 .advantages-item.detailed {
     display: flex;
-    flex-wrap: wrap;
-    background-color: #81b3d2;
+    flex-wrap: wrap;  
     color: #ffffff;
 }
 
 .advantages-definition {
     width: 400px;
-    padding-top: 45px;
+    padding-top: 27px;
     padding-right: 45px;
     padding-bottom: 45px;
     padding-left: 45px;
+    background-color: #81b3d2;
+}
+
+.advantages-definition h3 {
+    padding-left: 80px;
+    padding-right: 79px;
+    margin-bottom: 24px;
+}
+
+.advantages-definition p {
+    margin-top: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .advantages-item:nth-child(2) .advantages-definition {
@@ -154,19 +231,52 @@ a {
 
 .advantages-description {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+    padding-top: 61px;
+    margin-bottom: 14px;
 }
 
-.advantage-description-item {   
-    width: 400px;   
+.advantage-description-item {  
+    position: relative; 
+    width: 33.3%;   
     color: #333333;
-    padding-top: 55px;
+    padding-top: 73px;
     padding-right: 55px;
     padding-bottom: 55px;
     padding-left: 55px;
+}
+
+.advantage-description-item::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: -37px;
+    width: 75px;
+    height: 75px;   
+     
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.advantage-description-item.advantage-home::before {
+    background-image: url("../img/icon-home.svg");     
+}
+
+.advantage-description-item.advantage-food::before {
+    background-image: url("../img/icon-food.svg");     
+}
+
+.advantage-description-item.advantage-gift::before {
+    background-image: url("../img/icon-gift.svg");     
+}
+
+.hotel-search {
+    margin-top: 50px;
 }
 
 .hotel-search-title {
@@ -176,6 +286,9 @@ a {
 }
 
 .hotel-search-description {
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 45px;
     line-height: 24px;   
     font-weight: 400;   
 }
@@ -186,6 +299,11 @@ a {
     font-weight: 700;
     color: #ffffff;
     background-color: #766357;
+
+    width: 571px;
+    padding-top: 30px;
+    padding-bottom: 29px;
+    text-transform: uppercase;
 }
 
 .hotel-search-button:hover,
@@ -197,38 +315,95 @@ a {
     background-color:#503e33;
 }
 
-.site-footer {
+.sedona-map p {
+    margin: 0;
+}
+
+.site-footer {    
     display: flex;
     justify-content: space-between; 
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 1200px;    
+    padding-top: 22px;
+    padding-bottom: 29px;
     background-color: #fefefe;
     opacity: 0.9;
 }
 
 .social-button-list {
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
     width: 33.3%;
     text-align: center;
+    padding-right: 126px;
+    padding-left: 124px;
+}
+
+.social-button {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;   
+    background-color: #81b3d2; 
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #669ec0;    
+}
+
+.social-button:active {
+    background-color: #5496bd;    
+}
+
+.social-button:active path{
+    fill: #88b6d1;    
 }
 
 .hashtag {
+    width: 33.3%;
+    text-align: center;
+}
+
+.hashtag a {
     line-height: 26px;
     font-size: 21px;
     font-weight: 700;
     color: #000000;
-    width: 33.3%;
-    text-align: center;
 }   
 
 .copyright {
-    width: 33.3%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;    
+    text-align: center; 
 }
 
 .copyright b {
     font-weight: 400;   
     line-height: 26px;
+    margin-right: 9px;
+}
+
+.copyright a path{
+    fill: #231f20;
+}
+
+.copyright a:hover path,
+.copyright a:focus path {    
+    fill: #81b3d2;
+}
+
+.copyright a:active path {    
+    fill: #bdbbbc;
 }
 
 .hotels-container {
