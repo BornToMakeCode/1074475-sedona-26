@@ -97,25 +97,25 @@
                 <button type="button" class="hotel-search-button">Поиск гостиницы в Седоне</button>
 
                 <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="POST">
-                    <p class="by-date-from">
+                    <p class="hotel-search-field by-date-from">
                         <label for="date-from">Дата заезда:</label>
                         <input type="text" class="datepicker" id="date-from" name="dateFrom" placeholder="24 АПРЕЛЯ 2017">
                     </p>
-                    <p class="by-date-to">
+                    <p class="hotel-search-field by-date-to">
                         <label for="date-to">Дата выезда:</label>
                         <input type="text" class="datepicker" id="date-to" name="dateTo" placeholder="4 ИЮЛЯ 2017">
                     </p>
-                    <p class="by-adults-count">
+                    <p class="hotel-search-field by-adults-count">
                         <label for="adults-count">Взрослые:</label>
-                        <button type="button" class="add-count-button">Добавить взрослого</button>
+                        <button type="button" class="add-count-button"><span class="visually-hidden">Добавить взрослого</span></button>
                         <input type="number" id="adults-count" name="adultsCount" value="2">
-                        <button type="button" class="subtract-count-button">Убрать взрослого</button>
+                        <button type="button" class="subtract-count-button"><span class="visually-hidden">Убрать взрослого</span></button>
                     </p>
-                    <p class="by-children-count">                    
+                    <p class="hotel-search-field by-children-count">                    
                         <label for="children-count">Дети:</label>
-                        <button type="button" class="add-count-button">Добавить ребенка</button>
+                        <button type="button" class="add-count-button"><span class="visually-hidden">Добавить ребенка</span></button>
                         <input type="number" id="children-count" name="childrenCount" value="0">
-                        <button type="button" class="subtract-count-button">Убрать ребенка</button>
+                        <button type="button" class="subtract-count-button"><span class="visually-hidden">Убрать ребенка</span></button>
                     </p>
 
                     <button type="submit">Найти</button>

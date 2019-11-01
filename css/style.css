@@ -102,6 +102,11 @@ img {
 
 .navigation-items a:active {
     opacity: 0.3;
+    color: rgba(0,0,0,0.3)
+}
+
+.navigation-items a.selected {
+    color: #766357;
 }
 
 .main-content {
@@ -157,6 +162,7 @@ img {
     line-height: 26px;
     font-size: 14px;
     font-weight: 400;  
+    color: #333333;
 }
 
 .advantages-list {
@@ -191,7 +197,7 @@ img {
 
 .advantages-item.short {
     background-color: #eeeeee;
-    color: #333333;
+    color: #000000;
     width: 400px;
     padding-top: 27px;
     padding-right: 64px;
@@ -278,6 +284,7 @@ img {
 
 .hotel-search {
     margin-top: 50px;
+    position: relative;
 }
 
 .hotel-search-title {
@@ -314,6 +321,7 @@ img {
 
 .hotel-search-button:active {
     background-color:#503e33;
+    color: rgba(255,255,255,0.3);
 }
 
 .sedona-map {
@@ -427,62 +435,189 @@ img {
 }
 
 .hotel-search-form {
-    display:none;
+    /* display:none; */
+    position: absolute;
+    left: 50%;
+    width: 568px;
+    margin-left: -284px;
+    background-color: #ffffff;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.hotel-search-form button[type="submit"] {
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 23px;
+    margin-bottom: 54px;
+    background-color: #81b3d2;
+    color: #ffffff;
+    line-height: 26px;
+    font-size: 21px;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+}
+
+.hotel-search-form button[type="submit"]:hover,
+.hotel-search-form button[type="submit"]:focus {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+
+.hotel-search-form button[type="submit"]:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-search-field {
+    margin: 0;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.hotel-search-field label {
+    width: 123px;
+    margin-right: 20px;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hotel-search-field input {
+    background-color: yellow;
+    width: 100%;
+    border: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 12px;
+}
+
+.by-adults-count,
+.by-children-count {
+
+    width: 50%;
+}
+
+.by-adults-count label { 
+    margin-right: 40px;
+}
+
 
 .hotels-filter-form {
     display: flex;
     padding-top: 27px;
     padding-right: 73px;    
-    padding-left: 73px;    
+    padding-left: 73px; 
+    min-height: 217px;   
     background-color: #477ca6;
     background-image: url("../img/filter-background.jpg");  
-    background-size: cover;
+    background-position: 0 -56px;
+    background-repeat: no-repeat;
     color: #ffffff;
-
-    /* TEMP */
-    height: 217px;
 }
 
-.hotels-filter-form legend {
+.filter {
+    margin: 0; 
+    padding: 0;
+    border: none;
+}
+
+.filter legend{
     line-height: 21px;
     font-size: 16px;
     font-weight: 700;
 }
 
-.infrastructure-filter {
-    width: 264px;
+.infrastructure-filter {   
+    margin-left: -2px;
+    width: 256px;
 }
 
 .housing-type-filter {
     width: 264px;
 }
 
-.right-side-container {
-    margin-left: auto; 
-    width: 328px;
+.right-side-container {    
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    width: 316px;
 }
 
 .filter-options-list {
+    margin: 0;
+    padding: 0;  
     list-style: none;
 }
 
-.filter-option label {
-    line-height: 21px;
-    font-size: 14px;
-    font-weight: 400;   
+.filter-option {
+    margin: 0;   
+    margin-top: 25px;
+    position: relative;
 }
 
-.price-range-slider button {
-    background-color: #ffffff;
+.filter-option input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    width: 23px;
+    height: 23px;   
+}
+
+.filter-option input[type="checkbox"] + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/checkbox-off.svg");   
+    background-repeat: no-repeat;
+    top: -2px;
+    left: -2px;
+    width: 23px;
+    height: 23px;
+}
+
+.filter-option input[type="checkbox"]:checked + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/checkbox-on.svg");
+   
+    background-repeat: no-repeat;
+    top: -2px;
+    left: -2px;
+    width: 27px;
+    height: 23px;
+}
+
+.filter-option input[type="checkbox"]:focus + .checkbox-indicator {  
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-option label {  
+    margin-left: 40px;
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;   
 }
 
 .hotels-filter-button {
+    padding-top: 6px;
+    margin-right: 95px;    
+    padding-bottom: 5px;
+    margin-left: 84px;    
     line-height: 21px;
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
-    background-color: rgba(255,255,255,0)
+    background-color: rgba(255,255,255,0);    
+    border: 2px solid #ffffff;
 }
 
 .hotels-filter-button:hover,
@@ -508,7 +643,7 @@ img {
     width: 1200px;
     border-bottom: 1px solid #e5e5e5;
     bottom: 0;
-    left: -71px;
+    left: -72px;
 }
 
 .filter-result {
@@ -592,8 +727,7 @@ img {
 }
 
 .hotels-list {
-    padding: 0;
-    padding-left: 1px;
+    padding: 0;    
     background-color: #fefefe;
     list-style: none;    
 }
@@ -671,6 +805,7 @@ img {
 }
 
 .hotel-button-details:active {
+    color: rgba(255, 255, 255, 0.3);
     background-color:#5496bd;
     opacity: 0.3;
 }
@@ -740,3 +875,65 @@ img {
     color: #666666;
     background-color: #f2f2f2;
 }
+
+/* temporary here */
+
+.price-filter {
+    margin-bottom: 32px;
+}
+
+.price-filter-range {
+    display: flex;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #ffffff;
+}
+
+.filter-range-from,
+.filter-range-to {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4px;
+}
+
+.price-range {
+    width: 45%;
+    background: transparent;
+    color: #ffffff;
+    border: none;    
+}
+
+.range-slider {
+    margin: 0;
+    margin-top: 21px;    
+    bottom: 0;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.range-slider button {
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    top: -9px;
+    z-index: 2;
+}
+
+.selected-range-line {
+    border-bottom: 2px solid #ffffff;
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    left: 11px;
+}
+
+.range-slider-button-to {
+    left: 252px;
+}
+
