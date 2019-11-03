@@ -882,6 +882,7 @@ img {
     text-transform: uppercase;
     background-color: rgba(255,255,255,0);    
     border: 2px solid #ffffff;
+    border-radius: 2px;
 }
 
 .hotels-filter-button:hover,
