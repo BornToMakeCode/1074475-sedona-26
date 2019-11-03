@@ -333,6 +333,10 @@ img {
     margin: 0;
 }
 
+.sedona-map img {
+    display: block;
+}
+
 .site-footer {    
     display: flex;
     justify-content: space-between; 
@@ -738,6 +742,7 @@ img {
     padding-top: 5px;
     padding-bottom: 5px;
     border: 2px solid #ffffff;
+    border-radius: 3px;
 }
 
 .price-filter-range label {
