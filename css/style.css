@@ -786,6 +786,11 @@ img {
     cursor: pointer;
 }
 
+.range-slider button:hover,
+.range-slider button:focus {
+    border-width: 9px;
+}
+
 .selected-range-line {
     border-bottom: 2px solid #ffffff;
     position: absolute;
@@ -832,8 +837,7 @@ img {
 .filter-option input[type="checkbox"]:checked + .checkbox-indicator::before {
     content: "";
     position: absolute;
-    background-image: url("../img/checkbox-on.svg");
-   
+    background-image: url("../img/checkbox-on.svg");   
     background-repeat: no-repeat;
     top: -2px;
     left: -2px;
