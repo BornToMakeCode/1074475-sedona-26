@@ -839,6 +839,10 @@ img {
     height: 23px;
 }
 
+.filter-option input[type="checkbox"]:disabled + .checkbox-indicator::before {    
+    background-image: url("../img/checkbox-off-disabled.png");
+}
+
 .filter-option input[type="checkbox"]:checked + .checkbox-indicator::before {
     content: "";
     position: absolute;
@@ -848,6 +852,10 @@ img {
     left: -2px;
     width: 27px;
     height: 23px;
+}
+
+.filter-option input[type="checkbox"]:checked:disabled + .checkbox-indicator::before {    
+    background-image: url("../img/checkbox-on-disabled.png");       
 }
 
 .filter-option input[type="checkbox"]:focus + .checkbox-indicator {  
