@@ -513,6 +513,9 @@ img {
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 12px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;     
 }
 
 .datepicker input:active,
@@ -528,6 +531,31 @@ img {
 .countpicker input:hover {
     border-color: #ebebeb;
     background-color: #ebebeb;   
+}
+
+.datepicker input::placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+    opacity: 1;
+}
+  
+.datepicker input:-ms-input-placeholder { 
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+}
+  
+.datepicker input::-ms-input-placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+}
+
+.datepicker input::-webkit-input-placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
 }
 
 .datepicker button,
@@ -564,15 +592,65 @@ img {
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 12px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;   
 }
 
 .countpicker input::-webkit-outer-spin-button,
 .countpicker input::-webkit-inner-spin-button,
 .price-range::-webkit-inner-spin-button,
 .price-range::-webkit-inner-spin-button {  
-    -webkit-appearance: none;
+    -webkit-appearance: none;  
     margin: 0;
 }
+
+.countpicker input,
+.price-range {
+    -moz-appearance:textfield;
+}
+
+.countpicker input::placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+    opacity: 1;
+}
+  
+.countpicker input:-ms-input-placeholder { 
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+}
+  
+.countpicker input::-ms-input-placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+}
+
+.countpicker input::-webkit-input-placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+}
+
+.price-range::placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+  
+.price-range:-ms-input-placeholder { 
+   color: #ffffff;
+  }
+  
+.price-range::-ms-input-placeholder {
+   color: #ffffff;
+}
+
+.price-range::-webkit-input-placeholder {
+    color: #ffffff;
+} 
 
 .subtract-count-button::before,
 .add-count-button::before,
@@ -677,7 +755,7 @@ img {
 }
 
 .filter-range-from {
-    border-right: 2px solid white;
+    border-right: 2px solid #ffffff;
     margin-right: -7px;
 }
 
@@ -685,7 +763,8 @@ img {
     width: 45%;
     background: transparent;
     color: #ffffff;
-    border: none;    
+    border: none;  
+    line-height: 21px;  
 }
 
 .range-slider {
@@ -704,6 +783,7 @@ img {
     position: absolute;
     top: -9px;
     z-index: 2;
+    cursor: pointer;
 }
 
 .selected-range-line {
