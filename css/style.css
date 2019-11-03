@@ -45,6 +45,7 @@ img {
     width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
 .site-header {
@@ -68,7 +69,7 @@ img {
   
 .navigation-items {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;   
     margin: 0;
     padding-left: 0px;
     list-style: none;
@@ -81,11 +82,11 @@ img {
     padding-bottom: 16px;
 }
 
-.navigation-items li:nth-child(3) {  
+.navigation-items li:nth-child(4n + 3) {
     margin-left: auto;
     text-align: right;
 }
-.navigation-items li:nth-child(4) {
+.navigation-items li:nth-child(4n + 4) {
     text-align: right;
 }
 
@@ -139,9 +140,9 @@ img {
     position: absolute;
     background-image: url("../img/welcome-polygon.png");
     width: 1201px;
-    height: 59px;    
-    bottom: 0;
-    left: 0;
+    height: 59px;
+    bottom: -1px;
+    left: -1px;
 }
 
 .main-content h1 {
@@ -434,8 +435,7 @@ img {
     width: 1056px;
 }
 
-.hotel-search-form {
-    /* display:none; */
+.hotel-search-form {  
     position: absolute;
     left: 50%;
     width: 568px;
@@ -446,6 +446,7 @@ img {
     padding-top: 55px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
 }
 
 .hotel-search-form button[type="submit"] {
@@ -453,7 +454,7 @@ img {
     padding-top: 16px;
     padding-bottom: 16px;
     margin-top: 23px;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
     background-color: #81b3d2;
     color: #ffffff;
     line-height: 26px;
@@ -479,35 +480,133 @@ img {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    width: 100%;
 }
-.hotel-search-field label {
-    width: 123px;
+.hotel-search-field label {  
+    width: 92px;
     margin-right: 20px;
     line-height: 26px;
     font-size: 14px;
     font-weight: 700;
+    text-align: start;
 }
 
-.hotel-search-field input {
-    background-color: yellow;
-    width: 100%;
+.by-adults-count {
+    width: 50%;
+}
+
+.by-children-count { 
+    margin-left: auto;
+}
+
+.by-children-count label {
+    width: 45px;
+}
+
+.datepicker {
+    display: flex;
+}
+
+.datepicker input {  
+    width: 307px;   
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+}
+
+.datepicker input:active,
+.datepicker input:focus,
+.countpicker input:active,
+.countpicker input:focus {
+    outline: none;
+    border-color: #e5e5e5;
+    background-color: #ffffff;
+}
+
+.datepicker input:hover,
+.countpicker input:hover {
+    border-color: #ebebeb;
+    background-color: #ebebeb;   
+}
+
+.datepicker button,
+.countpicker button {
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    width: 40px;
+    outline: none;  
+}
+
+.datepicker button path {
+    fill: #cacaca;    
+}
+
+.datepicker button:focus path,
+.datepicker button:hover path{
+    fill: #000000;    
+}
+
+.datepicker button:active path{
+    fill: #81b3d2;    
+}
+
+.countpicker {
+    display: flex;
+    position: relative;
+}
+
+.countpicker input {    
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    width: 34px;
     border: none;
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 12px;
 }
 
-.by-adults-count,
-.by-children-count {
-
-    width: 50%;
+.countpicker input::-webkit-outer-spin-button,
+.countpicker input::-webkit-inner-spin-button,
+.price-range::-webkit-inner-spin-button,
+.price-range::-webkit-inner-spin-button {  
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.by-adults-count label { 
-    margin-right: 40px;
+.subtract-count-button::before,
+.add-count-button::before,
+.add-count-button::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  background-color: #a9a9a9;
+  right: 15px;
 }
 
+.subtract-count-button::before {
+    left: 15px;
+}
+
+.subtract-count-button:focus::before,
+.subtract-count-button:hover::before,
+.add-count-button:focus::before,
+.add-count-button:hover::before,
+.add-count-button:focus::after,
+.add-count-button:hover::after {
+    background-color: #000000;
+}
+
+.subtract-count-button:active::before,
+.add-count-button:active::before,
+.add-count-button:active::after {
+    background-color: #81b3d2;
+}
+
+.add-count-button::after {
+  transform: rotate(90deg);
+}
 
 .hotels-filter-form {
     display: flex;
@@ -549,6 +648,74 @@ img {
     display: flex;
     flex-direction: column;
     width: 316px;
+}
+
+.price-filter {
+    margin-bottom: 32px;
+}
+
+.price-filter-range {
+    display: flex;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #ffffff;
+}
+
+.price-filter-range label {
+    margin-right: 5px;
+}
+
+.filter-range-from,
+.filter-range-to {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end; 
+    width: 50%;
+}
+
+.filter-range-from {
+    border-right: 2px solid white;
+    margin-right: -7px;
+}
+
+.price-range {
+    width: 45%;
+    background: transparent;
+    color: #ffffff;
+    border: none;    
+}
+
+.range-slider {
+    margin: 0;
+    margin-top: 21px;    
+    bottom: 0;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.range-slider button {
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    top: -9px;
+    z-index: 2;
+}
+
+.selected-range-line {
+    border-bottom: 2px solid #ffffff;
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    left: 11px;
+}
+
+.range-slider-button-to {
+    left: 252px;
 }
 
 .filter-options-list {
@@ -875,65 +1042,3 @@ img {
     color: #666666;
     background-color: #f2f2f2;
 }
-
-/* temporary here */
-
-.price-filter {
-    margin-bottom: 32px;
-}
-
-.price-filter-range {
-    display: flex;
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 2px solid #ffffff;
-}
-
-.filter-range-from,
-.filter-range-to {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 4px;
-}
-
-.price-range {
-    width: 45%;
-    background: transparent;
-    color: #ffffff;
-    border: none;    
-}
-
-.range-slider {
-    margin: 0;
-    margin-top: 21px;    
-    bottom: 0;
-    position: relative;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.range-slider button {
-    background-color: #ababab;
-    border: 8px solid #ffffff;
-    border-radius: 50%;
-    padding: 2px;
-    position: absolute;
-    top: -9px;
-    z-index: 2;
-}
-
-.selected-range-line {
-    border-bottom: 2px solid #ffffff;
-    position: absolute;
-    z-index: 1;
-    width: 250px;
-    left: 11px;
-}
-
-.range-slider-button-to {
-    left: 252px;
-}
-
