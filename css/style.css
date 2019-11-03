@@ -486,12 +486,12 @@ img {
     align-items: center;
 }
 .hotel-search-field label {  
-    width: 92px;
-    margin-right: 20px;
+    width: 100px;
+    margin-right: 12px;
     line-height: 26px;
     font-size: 14px;
     font-weight: 700;
-    text-align: start;
+    text-align: left;
 }
 
 .by-adults-count {
@@ -503,7 +503,7 @@ img {
 }
 
 .by-children-count label {
-    width: 45px;
+    width: 53px;
 }
 
 .datepicker {
