@@ -537,13 +537,6 @@ img {
     border-color: #ebebeb;
     background-color: #ebebeb;   
 }
-
-.datepicker input::placeholder {
-    color: #000000;
-    font-size: 14px;
-    font-weight: 700;    
-    opacity: 1;
-}
   
 .datepicker input:-ms-input-placeholder { 
     color: #000000;
@@ -561,6 +554,13 @@ img {
     color: #000000;
     font-size: 14px;
     font-weight: 700;    
+}
+
+.datepicker input::placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
+    opacity: 1;
 }
 
 .datepicker button,
@@ -614,13 +614,6 @@ img {
 .price-range {
     -moz-appearance:textfield;
 }
-
-.countpicker input::placeholder {
-    color: #000000;
-    font-size: 14px;
-    font-weight: 700;    
-    opacity: 1;
-}
   
 .countpicker input:-ms-input-placeholder { 
     color: #000000;
@@ -640,14 +633,16 @@ img {
     font-weight: 700;    
 }
 
-.price-range::placeholder {
-    color: #ffffff;
+.countpicker input::placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;    
     opacity: 1;
-  }
+}
   
 .price-range:-ms-input-placeholder { 
    color: #ffffff;
-  }
+}
   
 .price-range::-ms-input-placeholder {
    color: #ffffff;
@@ -656,6 +651,11 @@ img {
 .price-range::-webkit-input-placeholder {
     color: #ffffff;
 } 
+
+.price-range::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
 
 .subtract-count-button::before,
 .add-count-button::before,
