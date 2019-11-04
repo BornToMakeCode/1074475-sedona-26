@@ -119,6 +119,7 @@ img {
     width: 1200px;     
     height: 509px;
     background-image: url("../img/welcome-background.jpg");
+    background-color: #b1d2e8;
     background-position: 0 -56px;
     background-repeat: no-repeat;
 }
