@@ -138,11 +138,11 @@ img {
 .wellcome-poster::after {
     content: "";
     position: absolute;
-    background-image: url("../img/welcome-polygon.png");
-    width: 1201px;
+    background-image: url("../img/intro-mask.svg");    
+    width: 1200px;
     height: 59px;
-    bottom: -1px;
-    left: -1px;
+    bottom: -2px;
+    left: 0;
 }
 
 .main-content h1 {
