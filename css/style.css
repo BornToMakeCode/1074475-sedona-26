@@ -1072,8 +1072,7 @@ img {
 
 .hotel-button-details:active {
     color: rgba(255, 255, 255, 0.3);
-    background-color:#5496bd;
-    opacity: 0.3;
+    background-color:#5496bd;   
 }
 
 .hotel-button-book {
@@ -1086,9 +1085,9 @@ img {
     background-color: #604e43;
 }
 
-.hotel-button-book:active {  
-    background-color: #503e33;
-    opacity: 0.3;
+.hotel-button-book:active { 
+    color: rgba(255, 255, 255, 0.3); 
+    background-color: #503e33;   
 }
 
 .hotels-rating {    
