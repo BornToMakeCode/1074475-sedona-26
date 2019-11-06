@@ -422,16 +422,16 @@ img {
     margin-right: 9px;
 }
 
-.copyright a path{
+.copyright-link path{
     fill: #231f20;
 }
 
-.copyright a:hover path,
-.copyright a:focus path {    
+.copyright-link:hover path,
+.copyright-link:focus path {    
     fill: #81b3d2;
 }
 
-.copyright a:active path {    
+.copyright-link:active path {    
     fill: #bdbbbc;
 }
 
@@ -574,7 +574,7 @@ img {
     opacity: 1;
 }
 
-.datepicker button,
+.datepicker-button,
 .countpicker button {
     border: 2px solid #f2f2f2;
     background-color: #f2f2f2;
@@ -582,16 +582,16 @@ img {
     outline: none;  
 }
 
-.datepicker button path {
+.datepicker-button path {
     fill: #cacaca;    
 }
 
-.datepicker button:focus path,
-.datepicker button:hover path{
+.datepicker-button:focus path,
+.datepicker-button:hover path{
     fill: #000000;    
 }
 
-.datepicker button:active path{
+.datepicker-button:active path{
     fill: #81b3d2;    
 }
 
@@ -989,17 +989,17 @@ img {
     margin-right: 11px;
 }
 
-.order-sorting-item a path{
+.order-sorting-link path{
     fill: #cacaca;
 }
 
-.order-sorting-item a:hover path,
-.order-sorting-item a:focus path{
+.order-sorting-link:hover path,
+.order-sorting-link:focus path {
     fill: #231f20;
 }
 
-.order-sorting-item a:active path,
-.order-sorting-item a.selected path{
+.order-sorting-link:active path,
+.order-sorting-link.selected path {
     fill: #81b3d2;
 }
 
